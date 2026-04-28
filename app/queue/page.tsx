@@ -2,7 +2,6 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import { Paintbrush, Clock, CheckCircle, Users, Bell, RefreshCw, ClipboardList } from 'lucide-react';
-import { BottomNav } from '@/components/bottom-nav';
 import { QueueItem } from '@/components/queue-item';
 import { SummaryCard } from '@/components/summary-card';
 import { SearchBar } from '@/components/search-bar';
@@ -80,7 +79,7 @@ export default function QueuePage() {
   // Admin View
   if (isAdmin) {
     return (
-      <main className="min-h-screen pb-24 bg-background">
+      <main className="min-h-screen pb-12 bg-background">
         <div className="max-w-md mx-auto px-6 pt-8">
           {/* Admin Header */}
           <div className="mb-8">
@@ -147,14 +146,14 @@ export default function QueuePage() {
           </div>
         </div>
         
-        <BottomNav />
+
       </main>
     );
   }
 
   // Client View
   return (
-    <main className="min-h-screen pb-24 bg-background">
+    <main className="min-h-screen pb-12 bg-background">
       <div className="max-w-md mx-auto px-6 pt-8">
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-1.5">
@@ -257,7 +256,7 @@ export default function QueuePage() {
         </div>
       </div>
       
-      <BottomNav />
+
     </main>
   );
 }

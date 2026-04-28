@@ -38,6 +38,7 @@ export const viewport: Viewport = {
   themeColor: '#FAF9F6',
 }
 
+import { AppleTabBar } from '@/components/apple-tab-bar';
 import { Toaster } from 'sonner';
 
 export default function RootLayout({
@@ -48,7 +49,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased bg-background">
-        {children}
+        <div className="pb-28">
+          {children}
+        </div>
+        <AppleTabBar />
         <Toaster position="top-center" expand={true} richColors />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

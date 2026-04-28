@@ -1,24 +1,32 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { User, Briefcase, Users, MessageSquare, Settings, ChevronRight, Facebook, Instagram, MessageCircle } from 'lucide-react';
-import { BottomNav } from '@/components/bottom-nav';
+import { User, Briefcase, Users, MessageSquare, Settings, ChevronRight, Facebook, Instagram, MessageCircle, Sparkles, ArrowLeft, FileText } from 'lucide-react';
 import { StatusBadge } from '@/components/status-badge';
 import { cn } from '@/lib/utils';
 import { profileData } from '@/lib/data';
 
 const menuItems = [
-  { href: '#', icon: User, label: 'Personal Info', color: 'bg-purple-50 text-purple-400' },
-  { href: '/portfolio', icon: Briefcase, label: 'Portfolio', color: 'bg-orange-50 text-orange-400' },
-  { href: '/admin', icon: Settings, label: 'Settings (Admin)', color: 'bg-blue-50 text-blue-400' },
-  { href: '/queue', icon: Users, label: 'My Queue', color: 'bg-emerald-50 text-emerald-400' },
+  { href: '/commission', icon: Sparkles, label: 'Commission Rates', color: 'bg-pastel-pink-bg text-pastel-pink' },
+  { href: '/portfolio', icon: Briefcase, label: 'Portfolio', color: 'bg-pastel-orange-bg text-pastel-orange' },
+  { href: '/queue', icon: Users, label: 'My Queue', color: 'bg-pastel-green-bg text-pastel-green' },
+  { href: '/tos', icon: FileText, label: 'ข้อตกลง (T.O.S)', color: 'bg-pastel-purple-bg text-pastel-purple' },
+  { href: '/admin', icon: Settings, label: 'Settings (Admin)', color: 'bg-pastel-blue-bg text-pastel-blue' },
 ];
 
 export default function ProfilePage() {
   return (
-    <main className="min-h-screen pb-24">
+    <main className="min-h-screen pb-12">
       <div className="max-w-md mx-auto px-6 pt-8">
         {/* Header */}
-
+        <div className="flex items-center gap-4 mb-8">
+          <Link 
+            href="/"
+            className="w-10 h-10 flex items-center justify-center rounded-2xl bg-white shadow-sm border border-slate-100 active:scale-90 transition-all"
+          >
+            <ArrowLeft className="w-5 h-5 text-slate-500" />
+          </Link>
+          <h1 className="text-xl font-black text-slate-800 tracking-tight">โปรไฟล์</h1>
+        </div>
 
         {/* Profile Card */}
         <div className="bg-card rounded-3xl p-6 shadow-sm mb-6">
@@ -96,7 +104,7 @@ export default function ProfilePage() {
         </div>
       </div>
       
-      <BottomNav />
+
     </main>
   );
 }

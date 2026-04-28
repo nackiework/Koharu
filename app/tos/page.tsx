@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { 
   ClipboardList, 
@@ -11,10 +12,10 @@ import {
   Ban, 
   Mail,
   Heart,
-  Check
+  Check,
+  ArrowLeft
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { BottomNav } from '@/components/bottom-nav';
 
 import { profileData } from '@/lib/data';
 
@@ -30,8 +31,8 @@ const tosSections: TosSection[] = [
   {
     icon: ClipboardList,
     title: 'การสั่งงาน',
-    iconColor: 'text-[#E8A4B8]',
-    iconBg: 'bg-[#FFE4E9]',
+    iconColor: 'text-pastel-pink',
+    iconBg: 'bg-pastel-pink-bg',
     items: [
       'กรุณาแจ้งรายละเอียดงานให้ครบถ้วน',
       'ส่งรูปอ้างอิง (Reference) เพื่อความแม่นยำ',
@@ -41,8 +42,8 @@ const tosSections: TosSection[] = [
   {
     icon: Wallet,
     title: 'การชำระเงิน',
-    iconColor: 'text-[#A8D5BA]',
-    iconBg: 'bg-[#E8F5E9]',
+    iconColor: 'text-pastel-green',
+    iconBg: 'bg-pastel-green-bg',
     items: [
       'ชำระเงินก่อนเริ่มงาน (100% หรือมัดจำ 50%)',
       'ไม่สามารถขอคืนเงินได้หลังเริ่มงาน',
@@ -51,8 +52,8 @@ const tosSections: TosSection[] = [
   {
     icon: Palette,
     title: 'ขั้นตอนการทำงาน',
-    iconColor: 'text-[#B4A7D6]',
-    iconBg: 'bg-[#EDE7F6]',
+    iconColor: 'text-pastel-purple',
+    iconBg: 'bg-pastel-purple-bg',
     items: [
       'เริ่มจากสเก็ตช์ → ลงสี → ส่งงาน',
       'ลูกค้าสามารถแก้ไขได้ในขั้นสเก็ตช์',
@@ -61,8 +62,8 @@ const tosSections: TosSection[] = [
   {
     icon: RefreshCw,
     title: 'การแก้ไขงาน',
-    iconColor: 'text-[#90CAF9]',
-    iconBg: 'bg-[#E3F2FD]',
+    iconColor: 'text-pastel-blue',
+    iconBg: 'bg-pastel-blue-bg',
     items: [
       'แก้ไขฟรี 2 ครั้ง',
       'เกินจากนี้มีค่าใช้จ่ายเพิ่มเติม',
@@ -71,8 +72,8 @@ const tosSections: TosSection[] = [
   {
     icon: Clock,
     title: 'ระยะเวลา',
-    iconColor: 'text-[#FFB74D]',
-    iconBg: 'bg-[#FFF3E0]',
+    iconColor: 'text-pastel-orange',
+    iconBg: 'bg-pastel-orange-bg',
     items: [
       'ใช้เวลาประมาณ 3–7 วัน',
       'ขึ้นอยู่กับจำนวนคิวในขณะนั้น',
@@ -82,8 +83,8 @@ const tosSections: TosSection[] = [
   {
     icon: Ban,
     title: 'ข้อห้าม',
-    iconColor: 'text-[#E57373]',
-    iconBg: 'bg-[#FFEBEE]',
+    iconColor: 'text-destructive',
+    iconBg: 'bg-destructive/10',
     items: [
       'ไม่รับงานเร่งด่วน',
       'ไม่รับงานที่ไม่เหมาะสม / ผิดกฎหมาย',
@@ -92,8 +93,8 @@ const tosSections: TosSection[] = [
   {
     icon: Mail,
     title: 'การติดต่อ',
-    iconColor: 'text-[#4DB6AC]',
-    iconBg: 'bg-[#E0F2F1]',
+    iconColor: 'text-primary',
+    iconBg: 'bg-primary/10',
     items: [
       'ช่องทาง: Line / Email',
       'ตอบกลับภายใน 24 ชั่วโมง',
@@ -105,10 +106,18 @@ export default function TosPage() {
   const [accepted, setAccepted] = useState(false);
 
   return (
-    <main className="min-h-screen pb-28">
+    <main className="min-h-screen pb-12">
       <div className="max-w-md mx-auto px-5 pt-8">
-
-
+        {/* Header */}
+        <div className="flex items-center gap-4 mb-8">
+          <Link 
+            href="/"
+            className="w-10 h-10 flex items-center justify-center rounded-2xl bg-white shadow-sm border border-slate-100 active:scale-90 transition-all"
+          >
+            <ArrowLeft className="w-5 h-5 text-slate-500" />
+          </Link>
+          <h1 className="text-xl font-black text-slate-800 tracking-tight">ข้อตกลง (T.O.S)</h1>
+        </div>
         {/* Sections */}
         <div className="space-y-4 mb-6">
           {tosSections.map((section, index) => (
@@ -180,7 +189,7 @@ export default function TosPage() {
         )}
       </div>
       
-      <BottomNav />
+
     </main>
   );
 }

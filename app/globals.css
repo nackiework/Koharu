@@ -43,6 +43,18 @@
   --warning-foreground: #1E293B;
   --blue-gradient-from: #A4BFDF; /* Medium */
   --blue-gradient-to: #89AAD7; /* Darkest */
+
+  /* Standardized Pastel Palette */
+  --pastel-pink: #E8A4B8;
+  --pastel-pink-bg: #FFE4E9;
+  --pastel-green: #A8D5BA;
+  --pastel-green-bg: #E8F5E9;
+  --pastel-purple: #B4A7D6;
+  --pastel-purple-bg: #EDE7F6;
+  --pastel-blue: #90CAF9;
+  --pastel-blue-bg: #E3F2FD;
+  --pastel-orange: #FFB74D;
+  --pastel-orange-bg: #FFF3E0;
 }
 
 .dark {
@@ -125,6 +137,17 @@
   --color-warning-foreground: var(--warning-foreground);
   --color-gradient-from: var(--blue-gradient-from);
   --color-gradient-to: var(--blue-gradient-to);
+
+  --color-pastel-pink: var(--pastel-pink);
+  --color-pastel-pink-bg: var(--pastel-pink-bg);
+  --color-pastel-green: var(--pastel-green);
+  --color-pastel-green-bg: var(--pastel-green-bg);
+  --color-pastel-purple: var(--pastel-purple);
+  --color-pastel-purple-bg: var(--pastel-purple-bg);
+  --color-pastel-blue: var(--pastel-blue);
+  --color-pastel-blue-bg: var(--pastel-blue-bg);
+  --color-pastel-orange: var(--pastel-orange);
+  --color-pastel-orange-bg: var(--pastel-orange-bg);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

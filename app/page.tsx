@@ -15,7 +15,6 @@ import {
   Clock
 } from "lucide-react";
 import { toast } from "sonner";
-import { BottomNav } from "@/components/bottom-nav";
 import { profileData, clientUser, portfolioData, QueueItem } from "@/lib/data";
 
 export default function HomePage() {
@@ -62,7 +61,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen pb-24 bg-background">
+    <main className="min-h-screen pb-12 bg-background">
       <div className="max-w-md mx-auto">
         {/* Hero Header */}
         <div className="px-6 pt-8 pb-6">
@@ -158,11 +157,11 @@ export default function HomePage() {
                 <span className="text-[10px] font-bold text-[#2C3E5A]">T.O.S</span>
               </Link>
 
-              <Link href="/admin" className="flex flex-col items-center gap-2.5 group active:scale-90 transition-all">
-                <div className="w-14 h-14 rounded-[1.2rem] bg-[#89AAD7] flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#89AAD7]/50 transition-all">
-                  <Settings className="w-6 h-6 text-white" />
+              <Link href="/commission" className="flex flex-col items-center gap-2.5 group active:scale-90 transition-all">
+                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-pink-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-pink/50 transition-all">
+                  <Sparkles className="w-6 h-6 text-pastel-pink" />
                 </div>
-                <span className="text-[10px] font-bold text-[#2C3E5A]">Settings</span>
+                <span className="text-[10px] font-bold text-[#2C3E5A]">Commission</span>
               </Link>
             </div>
           </div>
@@ -209,7 +208,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <BottomNav />
+
     </main>
   );
 }

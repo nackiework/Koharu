@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { ArrowLeft, MessageSquare, Calendar, FileText } from 'lucide-react';
-import { BottomNav } from '@/components/bottom-nav';
 import { ProgressBar } from '@/components/progress-bar';
 import { queueData, notesData } from '@/lib/data';
 import { notFound } from 'next/navigation';
@@ -33,7 +32,7 @@ export default async function QueueDetailPage({
   const recentNotes = notesData.filter(note => note.sender === 'admin').slice(0, 2);
 
   return (
-    <main className="min-h-screen pb-24">
+    <main className="min-h-screen pb-12">
       <div className="max-w-md mx-auto px-6 pt-6">
         {/* Back Button */}
         <Link 
@@ -130,7 +129,7 @@ export default async function QueueDetailPage({
         </Link>
       </div>
       
-      <BottomNav />
+
     </main>
   );
 }

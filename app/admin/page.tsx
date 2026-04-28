@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Settings, Image as ImageIcon, Users, ArrowLeft, Lock, ExternalLink, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
-import { BottomNav } from '@/components/bottom-nav';
 
 const adminOptions = [
   { 
@@ -62,13 +61,13 @@ export default function AdminHubPage() {
           </form>
           <Link href="/" className="inline-block text-xs text-slate-400 hover:text-primary underline">กลับไปหน้าแรก</Link>
         </div>
-        <BottomNav />
+
       </main>
     );
   }
 
   return (
-    <main className="min-h-screen bg-slate-50 pb-24">
+    <main className="min-h-screen bg-slate-50 pb-12">
       <div className="max-w-md mx-auto px-6 pt-8 text-center sm:text-left">
         {/* Header */}
         <div className="flex items-center gap-4 mb-8">
@@ -115,7 +114,7 @@ export default function AdminHubPage() {
         </button>
       </div>
 
-      <BottomNav />
+
     </main>
   );
 }

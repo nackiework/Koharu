@@ -16,9 +16,9 @@ interface QueueItemProps {
 
 export function QueueItem({ item, isCurrentUser, showActions, onStartDrawing, onMarkDone }: QueueItemProps) {
   const statusColors = {
-    doing: 'bg-[#C3E0F4] text-[#2C3E5A]',
-    waiting: 'bg-[#BAD1EC] text-[#2C3E5A]',
-    done: 'bg-[#E3F0FA] text-[#5A7A9E]',
+    doing: 'bg-secondary text-foreground',
+    waiting: 'bg-accent text-foreground',
+    done: 'bg-background text-muted-foreground',
   };
 
   const statusLabels = {
@@ -70,18 +70,18 @@ export function QueueItem({ item, isCurrentUser, showActions, onStartDrawing, on
       <div className={cn(
         "relative w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-white shadow-sm overflow-hidden transition-all duration-500 group-hover:scale-110",
         item.status === 'doing' 
-          ? "bg-[#F0F7FF]" 
+          ? "bg-pastel-blue-bg" 
           : item.status === 'done'
-          ? "bg-[#F2FAF5]"
-          : "bg-[#FFF5F7]"
+          ? "bg-pastel-green-bg"
+          : "bg-pastel-pink-bg"
       )}>
         <Heart className={cn(
           "w-5 h-5 fill-current transition-transform duration-700",
           item.status === 'doing' 
-            ? "text-[#B6D4EB]" 
+            ? "text-pastel-blue" 
             : item.status === 'done'
-            ? "text-[#B8D8BE]"
-            : "text-[#F2C1D1]"
+            ? "text-pastel-green"
+            : "text-pastel-pink"
         )} />
       </div>
       
