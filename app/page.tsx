@@ -137,22 +137,22 @@ export default function HomePage() {
             <h2 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 px-1">Menu</h2>
             <div className="grid grid-cols-4 gap-3">
               <Link href="/queue" className="flex flex-col items-center gap-2.5 group active:scale-90 transition-all">
-                <div className="w-14 h-14 rounded-[1.2rem] bg-[#C3E0F4] flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#BAD1EC]/50 transition-all">
-                  <Users className="w-6 h-6 text-[#89AAD7]" />
+                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-purple-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-purple/50 transition-all">
+                  <Users className="w-6 h-6 text-pastel-purple" />
                 </div>
                 <span className="text-[10px] font-bold text-[#2C3E5A]">Check Q</span>
               </Link>
 
               <Link href="/portfolio" className="flex flex-col items-center gap-2.5 group active:scale-90 transition-all">
-                <div className="w-14 h-14 rounded-[1.2rem] bg-[#BAD1EC] flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#A4BFDF]/50 transition-all">
-                  <Briefcase className="w-6 h-6 text-[#2C3E5A]" />
+                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-orange-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-orange/50 transition-all">
+                  <Briefcase className="w-6 h-6 text-pastel-orange" />
                 </div>
                 <span className="text-[10px] font-bold text-[#2C3E5A]">Portfolio</span>
               </Link>
 
               <Link href="/tos" className="flex flex-col items-center gap-2.5 group active:scale-90 transition-all">
-                <div className="w-14 h-14 rounded-[1.2rem] bg-[#A4BFDF] flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#89AAD7]/50 transition-all">
-                  <FileText className="w-6 h-6 text-white" />
+                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-green-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-green/50 transition-all">
+                  <FileText className="w-6 h-6 text-pastel-green" />
                 </div>
                 <span className="text-[10px] font-bold text-[#2C3E5A]">T.O.S</span>
               </Link>
@@ -173,16 +173,16 @@ export default function HomePage() {
             <div className="bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden">
               {/* Currently Doing */}
               <div className="p-5 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#C3E0F4] flex items-center justify-center flex-shrink-0">
-                  <Paintbrush className="w-5 h-5 text-[#89AAD7]" />
+                <div className="w-12 h-12 rounded-2xl bg-pastel-blue-bg flex items-center justify-center flex-shrink-0">
+                  <Paintbrush className="w-5 h-5 text-pastel-blue" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-[10px] font-bold text-[#5A7A9E] uppercase tracking-widest mb-0.5">Now Working</p>
+                  <p className="text-[10px] font-bold text-pastel-blue-dark uppercase tracking-widest mb-0.5">Now Working</p>
                   <p className="text-sm font-black text-[#2C3E5A] truncate">{currentlyDoing?.name || "—"}</p>
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#C3E0F4] rounded-full">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#89AAD7] animate-pulse" />
-                  <span className="text-[10px] font-black text-[#89AAD7] uppercase tracking-widest">Live</span>
+                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-pastel-blue-bg rounded-full">
+                  <div className="w-1.5 h-1.5 rounded-full bg-pastel-blue animate-pulse" />
+                  <span className="text-[10px] font-black text-pastel-blue uppercase tracking-widest">Live</span>
                 </div>
               </div>
 
