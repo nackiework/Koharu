@@ -6,13 +6,27 @@ export async function GET() {
   try {
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbywTSyD7cEgtNw5Zg_-CmK1iyMWzD-wHMQY3WHH1dDEyHh5LpDpHCQ-G_HLzFMUqrZFwg/exec';
     
-    const response = await fetch(SCRIPT_URL, { 
-      next: { revalidate: 0 },
-      cache: 'no-store'
-    });
+    let response;
+    let attempts = 0;
+    const maxAttempts = 3;
+
+    while (attempts < maxAttempts) {
+      try {
+        response = await fetch(SCRIPT_URL, { 
+          next: { revalidate: 0 },
+          cache: 'no-store',
+          signal: AbortSignal.timeout(15000) // 15s timeout
+        });
+        if (response.ok) break;
+      } catch (e) {
+        console.log(`Attempt ${attempts + 1} failed:`, e);
+      }
+      attempts++;
+      if (attempts < maxAttempts) await new Promise(r => setTimeout(r, 1000));
+    }
     
-    if (!response.ok) {
-      throw new Error('Failed to fetch from Google Apps Script');
+    if (!response || !response.ok) {
+      throw new Error('Failed to fetch from Google Apps Script after multiple attempts');
     }
     
     const data = await response.json();
