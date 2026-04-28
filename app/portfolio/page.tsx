@@ -67,11 +67,11 @@ export default function PortfolioPage() {
         setData(result);
         setHasError(false);
       } else {
-        console.error('API returned success:false or missing data', result);
+        console.log('API response issue:', result);
         setHasError(true);
       }
     } catch (err) {
-      console.error('Fetch error:', err);
+      console.log('Fetch exception:', err);
       setHasError(true);
     } finally {
       setLoading(false);

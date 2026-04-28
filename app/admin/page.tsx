@@ -38,7 +38,7 @@ export default function AdminHubPage() {
 
   if (!isAuthorized) {
     return (
-      <main className="min-h-screen flex flex-col items-center justify-center bg-slate-50 p-6">
+      <main className="min-h-screen flex flex-col items-center justify-center bg-background p-6">
         <div className="w-full max-w-sm bg-white rounded-[32px] p-8 shadow-xl border border-slate-100 text-center space-y-6">
           <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
             <Lock className="w-10 h-10 text-primary" />
@@ -67,7 +67,7 @@ export default function AdminHubPage() {
   }
 
   return (
-    <main className="min-h-screen bg-slate-50 pb-12">
+    <main className="min-h-screen bg-background pb-12">
       <div className="max-w-md mx-auto px-6 pt-8 text-center sm:text-left">
         {/* Header */}
         <div className="flex items-center gap-4 mb-8">

@@ -77,7 +77,7 @@ const packages: CommissionPackage[] = [
 
 export default function CommissionPage() {
   return (
-    <main className="min-h-screen pb-12 bg-[#FAFBFF]">
+    <main className="min-h-screen pb-12 bg-background">
       <div className="max-w-md mx-auto px-5 pt-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
