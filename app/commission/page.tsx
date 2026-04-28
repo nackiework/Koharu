@@ -14,7 +14,7 @@ import {
   Info
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { profileData } from '@/lib/data';
+import { profileData, portfolioData } from '@/lib/data';
 
 interface CommissionPackage {
   id: string;
@@ -91,11 +91,20 @@ export default function CommissionPage() {
           <div className="w-10 h-10" /> {/* Spacer */}
         </div>
 
-        {/* Hero Section */}
-        <div className="relative rounded-[2.5rem] overflow-hidden mb-8 shadow-xl shadow-primary/5">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#BAD1EC] to-[#E3F0FA]" />
-          <div className="relative z-10 p-8 flex flex-col items-center text-center">
-            <div className="w-20 h-20 rounded-full border-4 border-white overflow-hidden mb-4 shadow-lg">
+        <div className="relative rounded-[2.5rem] overflow-hidden mb-8 shadow-xl shadow-slate-200 group min-h-[240px] flex items-center justify-center">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-500/20 to-slate-900/40" />
+          
+          <div className="absolute inset-0 opacity-40 group-hover:opacity-50 transition-opacity">
+            <Image 
+              src="/bgstar.jpg" 
+              alt="Background" 
+              fill 
+              className="object-cover"
+            />
+          </div>
+
+          <div className="relative z-10 p-10 flex flex-col items-center text-center">
+            <div className="w-20 h-20 rounded-full border-4 border-white overflow-hidden mb-4 shadow-lg group-hover:scale-105 transition-transform duration-500">
               <Image 
                 src={profileData.avatar} 
                 alt="Artist" 
@@ -104,8 +113,8 @@ export default function CommissionPage() {
                 className="object-cover"
               />
             </div>
-            <h2 className="text-xl font-black text-slate-800 mb-1">ยินดีต้อนรับค่ะ! ✨</h2>
-            <p className="text-xs text-slate-500 font-medium leading-relaxed max-w-[200px]">
+            <h2 className="text-xl font-black text-white mb-1 drop-shadow-sm">Welcome</h2>
+            <p className="text-xs text-white/80 font-bold leading-relaxed max-w-[200px] drop-shadow-sm">
               เลือกสไตล์ที่ชอบแล้วทักมาคุยรายละเอียดกันได้เลยนะคะ
             </p>
           </div>
@@ -152,7 +161,7 @@ export default function CommissionPage() {
         </div>
 
         {/* How to order */}
-        <div className="bg-[#FFF9F0] rounded-[2rem] p-6 border-2 border-[#FFEBCD] mb-8">
+        <div className="bg-pastel-blue-bg rounded-[2rem] p-6 border-2 border-pastel-blue/20 mb-8">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-xl bg-[#FFB74D]/20 flex items-center justify-center">
               <Info className="w-5 h-5 text-[#FFB74D]" />

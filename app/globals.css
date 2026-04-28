@@ -4,57 +4,44 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #FFFCF8; /* Extra Light Cream - พื้นหลังหลัก */
+  --background: #FFFFFF;
   --foreground: #2C3E5A;
   --card: #FFFFFF;
   --card-foreground: #2C3E5A;
   --popover: #FFFFFF;
   --popover-foreground: #2C3E5A;
-  --primary: #89AAD7; /* Darkest - สีหลัก ปุ่ม/หัวข้อ */
+  --primary: #89AAD7;
   --primary-foreground: #FFFFFF;
-  --secondary: #C3E0F4; /* Light - สีรอง */
+  --secondary: #C3E0F4;
   --secondary-foreground: #2C3E5A;
   --muted: #C3E0F4;
   --muted-foreground: #5A7A9E;
-  --accent: #BAD1EC; /* Medium-Light - จุดเน้น */
+  --accent: #BAD1EC;
   --accent-foreground: #2C3E5A;
   --destructive: #E57373;
   --destructive-foreground: #FFFFFF;
   --border: #BAD1EC;
   --input: #C3E0F4;
   --ring: #89AAD7;
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
   --radius: 1.5rem;
-  --sidebar: #E3F0FA;
-  --sidebar-foreground: #2C3E5A;
-  --sidebar-primary: #89AAD7;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #C3E0F4;
-  --sidebar-accent-foreground: #2C3E5A;
-  --sidebar-border: #BAD1EC;
-  --sidebar-ring: #89AAD7;
+  
   --success: #A8D5BA;
   --success-foreground: #1E293B;
   --warning: #FFE082;
   --warning-foreground: #1E293B;
-  --blue-gradient-from: #A4BFDF; /* Medium */
-  --blue-gradient-to: #89AAD7; /* Darkest */
 
-  /* Standardized Pastel Palette */
-  --pastel-pink: #E8A4B8;
-  --pastel-pink-bg: #FFE4E9;
-  --pastel-green: #A8D5BA;
-  --pastel-green-bg: #E8F5E9;
-  --pastel-purple: #B4A7D6;
-  --pastel-purple-bg: #EDE7F6;
-  --pastel-blue: #90CAF9;
-  --pastel-blue-bg: #E3F2FD;
-  --pastel-orange: #FFB74D;
-  --pastel-orange-bg: #FFF3E0;
+  /* Unified Blue Monochrome Palette */
+  --pastel-pink: #89AAD7;       /* Blue instead of pink */
+  --pastel-pink-bg: #E3F0FA;
+  --pastel-green: #77B9F1;      /* Blue instead of green */
+  --pastel-green-bg: #E3F2FD;
+  --pastel-purple: #90CAF9;     /* Blue instead of purple */
+  --pastel-purple-bg: #EDF7FF;
+  --pastel-blue: #89AAD7;
+  --pastel-blue-bg: #E3F0FA;
+  --pastel-blue-dark: #6495ED;
+  --pastel-orange: #7CB9E8;     /* Blue instead of orange */
+  --pastel-orange-bg: #F0F8FF;
 }
 
 .dark {

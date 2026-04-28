@@ -2,16 +2,16 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Briefcase, Users, Sparkles, User } from 'lucide-react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
 const navItems = [
-  { href: '/', icon: Home, label: 'Home', color: 'text-pastel-blue', bgColor: 'bg-pastel-blue-bg' },
-  { href: '/commission', icon: Sparkles, label: 'Comms', color: 'text-pastel-pink', bgColor: 'bg-pastel-pink-bg' },
-  { href: '/portfolio', icon: Briefcase, label: 'Works', color: 'text-pastel-orange', bgColor: 'bg-pastel-orange-bg' },
-  { href: '/queue', icon: Users, label: 'Queue', color: 'text-pastel-purple', bgColor: 'bg-pastel-purple-bg' },
-  { href: '/profile', icon: User, label: 'Profile', color: 'text-slate-500', bgColor: 'bg-slate-100' },
+  { href: '/', image: '/icons/bunny.jpg', label: 'Home', color: 'text-pastel-blue', bgColor: 'bg-pastel-blue-bg' },
+  { href: '/commission', image: '/icons/milk.jpg', label: 'Comms', color: 'text-pastel-pink', bgColor: 'bg-pastel-pink-bg' },
+  { href: '/portfolio', image: '/icons/book.jpg', label: 'Works', color: 'text-pastel-orange', bgColor: 'bg-pastel-orange-bg' },
+  { href: '/queue', image: '/icons/fluffy.jpg', label: 'Queue', color: 'text-pastel-purple', bgColor: 'bg-pastel-purple-bg' },
+  { href: '/profile', image: '/icons/cat.jpg', label: 'Profile', color: 'text-slate-500', bgColor: 'bg-slate-100' },
 ];
 
 export function AppleTabBar() {
@@ -34,28 +34,33 @@ export function AppleTabBar() {
                 layout
                 transition={{ type: "spring", stiffness: 350, damping: 30 }}
                 className={cn(
-                  "flex items-center gap-2 px-4 py-3 rounded-full transition-all duration-300",
+                  "flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-300",
                   isActive ? cn(item.bgColor, item.color) : "text-slate-400"
                 )}
               >
-                <item.icon className={cn(
-                  "w-5 h-5 transition-all duration-300",
-                  isActive ? "scale-110" : "scale-100"
-                )} />
+                <div className={cn(
+                  "relative w-7 h-7 overflow-hidden rounded-xl transition-all duration-300 shadow-sm",
+                  isActive ? "scale-110 ring-2 ring-white/50" : "scale-100 opacity-70 grayscale-[0.2]"
+                )}>
+                  <Image
+                    src={item.image}
+                    alt={item.label}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 
                 {isActive && (
                   <motion.span
                     initial={{ width: 0, opacity: 0 }}
                     animate={{ width: "auto", opacity: 1 }}
                     exit={{ width: 0, opacity: 0 }}
-                    className="text-[11px] font-black uppercase tracking-widest whitespace-nowrap overflow-hidden"
+                    className="text-[11px] font-black uppercase tracking-widest whitespace-nowrap overflow-hidden mr-1"
                   >
                     {item.label}
                   </motion.span>
                 )}
               </motion.div>
-              
-              {/* Highlight bar for active state if needed, but the expanding BG is enough */}
             </Link>
           );
         })}

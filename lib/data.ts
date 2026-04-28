@@ -41,7 +41,7 @@ export const currentUser: User = {
   id: 1,
   name: "Koharu",
   role: "admin", // Change to "client" to test client view
-  avatar: "/hanae-avatar.jpg"
+  avatar: "/profile.jpg"
 };
 
 // For testing client view - this would be the logged in client
@@ -49,7 +49,7 @@ export const clientUser: User = {
   id: 103,
   name: "Koharu",
   role: "client",
-  avatar: "/hanae-avatar.jpg"
+  avatar: "/profile.jpg"
 };
 
 export const queueData: QueueItem[] = [
@@ -90,7 +90,7 @@ export const queueData: QueueItem[] = [
     deadline: "2026-05-20",
     description: "Illustration ตัวละครแฟนตาซี",
     progress: 0,
-    avatar: "/hanae-avatar.jpg"
+    avatar: "/profile.jpg"
   },
   { 
     id: 4,
@@ -209,7 +209,7 @@ export const portfolioData: PortfolioItem[] = [
 export const profileData = {
   name: "Koharu",
   subtitle: "Artist / Illustrator",
-  avatar: "/hanae-avatar.jpg",
+  avatar: "/profile.jpg",
   isOpen: true,
   socials: {
     facebook: "https://facebook.com",

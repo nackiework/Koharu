@@ -89,18 +89,18 @@ export default function HomePage() {
           </div>
 
           {/* Status Banner */}
-          <div className="rounded-[2rem] relative overflow-hidden shadow-xl shadow-primary/10 mb-8">
+          <div className="rounded-[2rem] relative overflow-hidden shadow-xl shadow-primary/10 mb-8 min-h-[240px] flex items-center justify-center">
             {/* Background Image */}
             <Image
-              src="/baby-blue-banner.jpg"
+              src="/bgstar.jpg"
               alt="Status Background"
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/40 to-blue-900/50" />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 to-slate-900/40" />
 
-            <div className="relative z-10 p-6">
-              <div className="flex items-center justify-between mb-5">
+            <div className="relative z-10 p-8 w-full">
+              <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-2.5">
                   <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20">
                     <Sparkles className="w-4 h-4 text-white" />
@@ -137,29 +137,29 @@ export default function HomePage() {
             <h2 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 px-1">Menu</h2>
             <div className="grid grid-cols-4 gap-3">
               <Link href="/queue" className="flex flex-col items-center gap-2.5 group active:scale-90 transition-all">
-                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-purple-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-purple/50 transition-all">
-                  <Users className="w-6 h-6 text-pastel-purple" />
+                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-purple-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-purple/50 transition-all overflow-hidden relative">
+                  <Image src="/icons/fluffy.jpg" alt="Queue" fill className="object-cover" />
                 </div>
                 <span className="text-[10px] font-bold text-[#2C3E5A]">Check Q</span>
               </Link>
 
               <Link href="/portfolio" className="flex flex-col items-center gap-2.5 group active:scale-90 transition-all">
-                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-orange-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-orange/50 transition-all">
-                  <Briefcase className="w-6 h-6 text-pastel-orange" />
+                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-orange-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-orange/50 transition-all overflow-hidden relative">
+                  <Image src="/icons/book.jpg" alt="Portfolio" fill className="object-cover" />
                 </div>
                 <span className="text-[10px] font-bold text-[#2C3E5A]">Portfolio</span>
               </Link>
 
               <Link href="/tos" className="flex flex-col items-center gap-2.5 group active:scale-90 transition-all">
-                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-green-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-green/50 transition-all">
-                  <FileText className="w-6 h-6 text-pastel-green" />
+                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-green-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-green/50 transition-all overflow-hidden relative">
+                  <Image src="/icons/bunny.jpg" alt="T.O.S" fill className="object-cover" />
                 </div>
                 <span className="text-[10px] font-bold text-[#2C3E5A]">T.O.S</span>
               </Link>
 
               <Link href="/commission" className="flex flex-col items-center gap-2.5 group active:scale-90 transition-all">
-                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-pink-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-pink/50 transition-all">
-                  <Sparkles className="w-6 h-6 text-pastel-pink" />
+                <div className="w-14 h-14 rounded-[1.2rem] bg-pastel-pink-bg flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-pastel-pink/50 transition-all overflow-hidden relative">
+                  <Image src="/icons/milk.jpg" alt="Commission" fill className="object-cover" />
                 </div>
                 <span className="text-[10px] font-bold text-[#2C3E5A]">Commission</span>
               </Link>
